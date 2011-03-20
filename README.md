@@ -2,8 +2,8 @@
 
 This is a sample project for a presentation at the April 2011 Desert Code Camp in
 Chandler, Arizona. Visit the [Code Camp website](http://apr2011.desertcodecamp.com)
-for more details. Also please check out the page for our [MVC Architecture in PHP](http://apr2011.desertcodecamp.com/session/272) 
-presentation on the website as well.
+for more details. Also please check out the page for our [MVC Architecture in PHP presentation](http://apr2011.desertcodecamp.com/session/272) 
+on the website as well.
 
 ## Presentation Summary
 
