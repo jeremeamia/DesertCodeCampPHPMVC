@@ -5,6 +5,10 @@ Chandler, Arizona. Visit the [Code Camp website](http://apr2011.desertcodecamp.c
 for more details. Also please check out the page for our [MVC Architecture in PHP presentation](http://apr2011.desertcodecamp.com/session/272) 
 on the website as well.
 
+## Project
+
+*Explain project here*
+
 ## Presentation
 
 ### Summary
