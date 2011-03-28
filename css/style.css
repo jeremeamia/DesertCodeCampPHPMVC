@@ -144,19 +144,16 @@ button {  width: auto; overflow: visible; }
    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
-/**
- * You might tweak these..
- */
-
 body, select, input, textarea {
-  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #444;
-  /* Set your base font here, to apply evenly */
   /* font-family: Georgia, serif;  */
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
 
 a, a:active, a:visited { color: #607890; }
 a:hover { color: #036; }
@@ -165,19 +162,13 @@ a:hover { color: #036; }
 /**
  * Primary styles
  *
- * Author: 
+ * Author: Jeremy Lindblom
  */
 
-
-
-
-
-
-
-
-
-
-
+body.no-layout #main {
+	width: 900px;
+	margin: 1em auto;
+}
 
 
 

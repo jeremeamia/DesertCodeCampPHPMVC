@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/libs/modernizr-1.7.min.js"></script>
 </head>
-<body id="<?php echo trim($request->directory().'_'.$request->controller().'_'.$request->action(), '_'); ?>">
+<body id="<?php echo trim($request->directory().'_'.$request->controller().'_'.$request->action(), '_'); ?>" class="no-layout">
   <div id="main" role="main">
 	<h1><?php echo $title; ?></h1>
 	<?php if ($stories): ?>
