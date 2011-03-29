@@ -15,10 +15,17 @@
   <div id="main" role="main">
 	<h1><?php echo $title; ?></h1>
 	<?php if ($stories): ?>
-	  <div class="stories">
-	    <div class="story">
-          STORY
-	    </div>
+	  <div class="stories clearfix">
+		<?php foreach ($stories as $story): ?>
+		  <a href="#">
+	        <div class="story" id="story_<?php echo $story->id; ?>">
+              <p class="story-description"><?php echo $story->description; ?></p>
+              <span class="story-number"><?php echo $story->type; ?> #<?php echo $story->id; ?></span>
+              <span class="story-theme">Theme: <?php echo $story->theme; ?></span>
+              <span class="story-points"><?php echo $story->points; ?> pts</span>
+	        </div>
+		  </a>
+		<?php endforeach; ?>
 	  </div>
 	<?php else: ?>
 	  <div class="no-stories">
