@@ -9,7 +9,52 @@
  * - camendesign.com/design/
  * - praegnanz.de/weblog/htmlcssjs-kickstart
  */
+ 
+ /* Font-face Kits */
+ @font-face {
+    font-family: 'ArimoRegular';
+    src: url('Arimo-Regular-Latin-webfont.eot');
+    src: url('Arimo-Regular-Latin-webfont.eot?iefix') format('eot'),
+         url('Arimo-Regular-Latin-webfont.woff') format('woff'),
+         url('Arimo-Regular-Latin-webfont.ttf') format('truetype'),
+         url('Arimo-Regular-Latin-webfont.svg#webfontfp9yEXd3') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+@font-face {
+    font-family: 'ArimoItalic';
+    src: url('Arimo-Italic-Latin-webfont.eot');
+    src: url('Arimo-Italic-Latin-webfont.eot?iefix') format('eot'),
+         url('Arimo-Italic-Latin-webfont.woff') format('woff'),
+         url('Arimo-Italic-Latin-webfont.ttf') format('truetype'),
+         url('Arimo-Italic-Latin-webfont.svg#webfont42n037qc') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ArimoBold';
+    src: url('Arimo-Bold-Latin-webfont.eot');
+    src: url('Arimo-Bold-Latin-webfont.eot?iefix') format('eot'),
+         url('Arimo-Bold-Latin-webfont.woff') format('woff'),
+         url('Arimo-Bold-Latin-webfont.ttf') format('truetype'),
+         url('Arimo-Bold-Latin-webfont.svg#webfonttFm9rI8X') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ArimoBoldItalic';
+    src: url('Arimo-BoldItalic-Latin-webfont.eot');
+    src: url('Arimo-BoldItalic-Latin-webfont.eot?iefix') format('eot'),
+         url('Arimo-BoldItalic-Latin-webfont.woff') format('woff'),
+         url('Arimo-BoldItalic-Latin-webfont.ttf') format('truetype'),
+         url('Arimo-BoldItalic-Latin-webfont.svg#webfontSEjcCwHE') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /**
  * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
@@ -146,11 +191,11 @@ button {  width: auto; overflow: visible; }
 
 body, select, input, textarea {
   color: #444;
-  /* font-family: Georgia, serif;  */
+  font-family: "ArimoRegular", "Helvetica Neue", Arial, serif;
 }
 
 /* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; font-family: "ArimoBold", "Helvetica Neue", Arial, serif;}
 h1 { font-size: 3em; }
 h2 { font-size: 2em; }
 h3 { font-size: 1.5em; }
@@ -170,8 +215,88 @@ body.no-layout #main {
 	margin: 1em auto;
 }
 
+#story_index div.stories a {
+	text-decoration: none;
+}
+#story_index .story {
+	width: 242px;
+	border: 1px #9af solid;
+	padding: 40px 15px;
+	float: left;
+	margin: 15px 25px 10px 0;
+	position: relative;
+	color: black;
 
+	-moz-box-shadow: 3px 3px 4px #eee;
+	-webkit-box-shadow: 3px 3px 4px #eee;
+	box-shadow: 3px 3px 4px #eee;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 
+	opacity: 0.65;
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transform: opacity 0.2s linear;
+
+	background-color: #fff;
+	background-image: -moz-linear-gradient(top, #fff, #eef); /* FF3.6 */
+	background-image: -o-linear-gradient(top, #fff, #eef); /* Opera 11.10+ */
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #fff),color-stop(1, #eef)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(#fff, #eef); /* Chrome 10+, Saf5.1+ */
+	background-image: linear-gradient(top, #fff, #eef);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fff', EndColorStr='#eff'); /* IE6–IE9 */
+}
+#story_index .story:nth-child(3n) {margin-right: 0;}
+#story_index .story .story-description {line-height: 1.5em;}
+#story_index .story .story-number {
+	display: block;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	background-color: #9af;
+	color: #fff;
+	padding: 3px;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+	-moz-border-radius-topright: 3px;
+	-webkit-top-right-border-radius: 3px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-bottom-left-border-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+#story_index .story .story-theme {
+	display: block;
+	position: absolute;
+	bottom: -1px;
+	left: -1px;
+	background-color: #9af;
+	color: #fff;
+	padding: 3px;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 268px;
+
+	-moz-border-radius-bottomright: 3px;
+	-webkit-bottom-right-border-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-bottom-left-border-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+#story_index .story .story-points {
+	display: block;
+	position: absolute;
+	right: -1px;
+	bottom: -1px;
+	z-index: 1;
+	color: #fff;
+	padding: 3px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#story_index .story:hover {opacity: 1;}
 
 
 /**
