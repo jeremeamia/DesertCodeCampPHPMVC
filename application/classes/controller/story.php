@@ -31,7 +31,13 @@ class Controller_Story extends Controller {
 
 	public function action_add()
 	{
-		$this->response->body('hello, world!');
+		$view = View::factory('story/add')
+			->set('title', 'Add User Story')
+			->set('request', $this->request)
+			->set('values', $this->request->post())
+			->bind('errors', $errors);
+
+		$this->response->body($view);
 	}
 
 	public function action_edit()
