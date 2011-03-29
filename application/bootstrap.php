@@ -80,7 +80,8 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init(array(
-	'base_url'   => 'http://dev.vm/DesertCodeCampPHPMVC/',
+	'base_url'   => '/',
+	'index_file' => '',
 ));
 
 /**

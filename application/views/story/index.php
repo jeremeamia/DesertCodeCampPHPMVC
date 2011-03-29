@@ -7,33 +7,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title><?php echo $title; ?> - Sprint Planner</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/libs/modernizr-1.7.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/libs/modernizr-1.7.min.js"></script>
 </head>
 <body id="<?php echo trim($request->directory().'_'.$request->controller().'_'.$request->action(), '_'); ?>" class="no-layout">
   <div id="main" role="main">
 	<h1><?php echo $title; ?></h1>
-	<?php if ($stories): ?>
-	  <div class="stories clearfix">
-		<?php foreach ($stories as $story): ?>
-		  <a href="#">
-	        <div class="story" id="story_<?php echo $story->id; ?>">
-              <p class="story-description"><?php echo $story->description; ?></p>
-              <span class="story-number"><?php echo $story->type; ?> #<?php echo $story->id; ?></span>
-              <span class="story-theme">Theme: <?php echo $story->theme; ?></span>
-              <span class="story-points"><?php echo $story->points; ?> pts</span>
-	        </div>
-		  </a>
-		<?php endforeach; ?>
-	  </div>
-	<?php else: ?>
-	  <div class="no-stories">
-	    NO STORIES
-	  </div>
-	<?php endif; ?>
+	<div class="stories clearfix">
+      <a class="story" id="story_add_card" href="<?php echo URL::site('story/add'); ?>" title="Add a new story">
+        <p class="story-description"><span>Add a New Story</span></p>
+      </a>
+      <?php foreach ($stories as $story): ?>
+		<a class="story" id="story_#<?php echo $story->id; ?>" href="<?php echo URL::site('story/view/'.$story->id); ?>" title="Story #<?php echo $story->id?>">
+          <p class="story-description"><?php echo $story->description; ?></p>
+          <span class="story-number"><?php echo $story->type; ?> #<?php echo $story->id; ?></span>
+          <span class="story-theme">Theme: <?php echo $story->theme; ?></span>
+          <span class="story-points"><?php echo $story->points; ?> pts</span>
+        </a>
+      <?php endforeach; ?>
+	</div>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script>window.jQuery || document.write("<script src='/assets/js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
   <script src="js/script.js"></script>
 </body>
 </html>
