@@ -14,7 +14,19 @@ class Controller_Story extends Controller {
 
 	public function action_view()
 	{
-		$this->response->body('hello, world!');
+		$story = Model::factory('story')
+			->where('id', '=', $this->request->param('id'))
+			->find();
+		
+		if ( ! $story->loaded())
+			throw new HTTP_Exception_404;
+
+		$this->view = View::factory('story/view')
+			->set('title', 'Story #'.$story->id)
+			->set('request', $this->request)
+			->set('story', $story);
+
+		$this->response->body($this->view);
 	}
 
 	public function action_add()
