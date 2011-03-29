@@ -175,7 +175,6 @@ body.no-layout #main {
 
 #story_index .story {
 	font-weight: bold;
-	text-decoration: none;
 	float: left;
 	width: 242px;
 	min-height: 96px;
@@ -186,6 +185,7 @@ body.no-layout #main {
 	color: black;
 	font-size: 1.25em;
 	line-height: 1.35em;
+	cursor: pointer;
 
 	-moz-box-shadow: 3px 3px 4px #eee;
 	-webkit-box-shadow: 3px 3px 4px #eee;
@@ -259,9 +259,34 @@ body.no-layout #main {
 	margin-top: 30px;
 	text-align: center;
 }
-#story_index .story#story_add_card .story-description span {
+#story_index .story#story_add_card .story-description a {
 	padding-left: 20px;
 	background: url(../img/add.png) left center no-repeat;
+	text-decoration: none;
+}
+#story_index .story .story-action {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	visibility: hidden;
+}
+#story_index .story:hover .story-action {
+	visibility: visible;
+}
+#story_index .story .story-action.view {
+	background-image: url(../img/magnifier.png);
+	top: 4px;
+	left: 4px;
+}
+#story_index .story .story-action.edit {
+	background-image: url(../img/pencil.png);
+	top: 4px;
+	left: 28px;
+}
+#story_index .story .story-action.delete {
+	background-image: url(../img/delete.png);
+	top: 4px;
+	left: 52px;
 }
 
 /**

@@ -14,9 +14,10 @@
   <div id="main" role="main">
 	<h1>This Page is Incomplete</h1>
 	<p>Sorry, we did not take the time to implement this page for the presentation.</p>
+	<p><a href="/story/index" title="Back to stories">&laquo; Return back to the Stories index</a></p>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
   <script>window.jQuery || document.write("<script src='/assets/js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
-  <script src="js/script.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>

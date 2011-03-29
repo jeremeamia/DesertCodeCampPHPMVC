@@ -14,21 +14,24 @@
   <div id="main" role="main">
 	<h1><?php echo $title; ?></h1>
 	<div class="stories clearfix">
-      <a class="story" id="story_add_card" href="<?php echo URL::site('story/add'); ?>" title="Add a new story">
-        <p class="story-description"><span>Add a New Story</span></p>
-      </a>
+      <div class="story" id="story_add_card">
+        <p class="story-description"><a href="<?php echo URL::site('story/add'); ?>">Add a New Story</a></p>
+      </div>
       <?php foreach ($stories as $story): ?>
-		<a class="story" id="story_#<?php echo $story->id; ?>" href="<?php echo URL::site('story/view/'.$story->id); ?>" title="Story #<?php echo $story->id?>">
+		<div class="story" id="story_#<?php echo $story->id; ?>">
           <p class="story-description"><?php echo $story->description; ?></p>
           <span class="story-number"><?php echo $story->type; ?> #<?php echo $story->id; ?></span>
           <span class="story-theme">Theme: <?php echo $story->theme; ?></span>
           <span class="story-points"><?php echo $story->points; ?> pts</span>
-        </a>
+		  <a class="ir story-action view" href="<?php echo URL::site('story/view/'.$story->id); ?>">View Story #<?php echo $story->id; ?></a>
+		  <a class="ir story-action edit" href="<?php echo URL::site('story/edit/'.$story->id); ?>">Edit Story #<?php echo $story->id; ?></a>
+		  <a class="ir story-action delete" href="<?php echo URL::site('story/delete/'.$story->id); ?>">Delete Story #<?php echo $story->id; ?></a>
+        </div>
       <?php endforeach; ?>
 	</div>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
   <script>window.jQuery || document.write("<script src='/assets/js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
-  <script src="js/script.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
