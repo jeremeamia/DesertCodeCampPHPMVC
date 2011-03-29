@@ -4,12 +4,12 @@ class Controller_Story extends Controller {
 
 	public function action_index()
 	{
-		$this->view = View::factory('story/index')
+		$view = View::factory('story/index')
 			->set('title', 'User Stories')
 			->set('request', $this->request)
 			->set('stories', Model::factory('story')->find_all());
 
-		$this->response->body($this->view);
+		$this->response->body($view);
 	}
 
 	public function action_view()
@@ -21,12 +21,12 @@ class Controller_Story extends Controller {
 		if ( ! $story->loaded())
 			throw new HTTP_Exception_404;
 
-		$this->view = View::factory('story/view')
+		$view = View::factory('story/view')
 			->set('title', 'Story #'.$story->id)
 			->set('request', $this->request)
 			->set('story', $story);
 
-		$this->response->body($this->view);
+		$this->response->body($view);
 	}
 
 	public function action_add()
@@ -36,12 +36,16 @@ class Controller_Story extends Controller {
 
 	public function action_edit()
 	{
-		$this->response->body('hello, world!');
+		// Note: This page is not implemented
+		$view = View::factory('story/incomplete');
+		$this->response->body($view);
 	}
 
 	public function action_delete()
 	{
-		$this->response->body('hello, world!');
+		// Note: This page is not implemented
+		$view = View::factory('story/incomplete');
+		$this->response->body($view);
 	}
 
 } // End Story
