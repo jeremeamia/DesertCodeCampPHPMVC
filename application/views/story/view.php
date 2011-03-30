@@ -22,10 +22,10 @@
 			<span class="story-number"><?php echo $story->type; ?> #<?php echo $story->id; ?></span>
 			<span class="story-theme">Theme: <?php echo $story->theme; ?></span>
 			<span class="story-points"><?php echo $story->points; ?> pts</span>
+			<h2>Description</h2>
 			<p class="story-description"><?php echo $story->description; ?></p>
-			<a class="ir story-action view" href="<?php echo URL::site('story/view/'.$story->id); ?>">View Story #<?php echo $story->id; ?></a>
-			<a class="ir story-action edit" href="<?php echo URL::site('story/edit/'.$story->id); ?>">Edit Story #<?php echo $story->id; ?></a>
-			<a class="ir story-action delete" href="<?php echo URL::site('story/delete/'.$story->id); ?>">Delete Story #<?php echo $story->id; ?></a>
+			<h2>Conditions of Satisfaction / Notes</h2>
+			<p class="story-notes"><?php echo nl2br($story->notes); ?></p>
 		</div>
 
 	</div>

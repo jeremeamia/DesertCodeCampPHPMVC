@@ -373,7 +373,67 @@ form .field #points {width: 100px;}
 
 /* STORY/VIEW PAGE */
 #story_view .story {
-	padding: 36px;
+	padding: 30px 30px 60px;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+#story_view h2 {padding: 15px 0; font-size: 1.75em;}
+#story_view .story .story-number {
+	font-weight: bold;
+	display: block;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	background-color: #9af;
+	color: #fff;
+	padding: 6px;
+	text-transform: uppercase;
+
+	-moz-border-radius-topright: 3px;
+	-webkit-top-right-border-radius: 3px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-bottom-left-border-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+#story_view .story .story-theme {
+	font-weight: bold;
+	font-size: 1.25em;
+	display: block;
+	position: absolute;
+	bottom: -1px;
+	left: -1px;
+	background-color: #9af;
+	color: #fff;
+	padding: 6px;
+	text-transform: uppercase;
+
+	-moz-border-radius-topright: 3px;
+	-webkit-top-right-border-radius: 3px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-bottom-left-border-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+#story_view .story .story-points {
+	font-weight: bold;
+	font-size: 1.25em;
+	display: block;
+	position: absolute;
+	right: -1px;
+	bottom: -1px;
+	z-index: 1;
+	color: #000;
+	padding: 6px;
+	text-transform: uppercase;
+	background-color: #9af;
+
+	-moz-border-radius-topleft: 3px;
+	-webkit-top-left-border-radius: 3px;
+	border-top-left-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-bottom-right-border-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 
 /* STORY/ADD PAGE */
