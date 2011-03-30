@@ -17,7 +17,7 @@
 		<?php echo Form::open($request); ?>
 			<div class="type field">
 				<select name="type" id="type">
-					<option>Select a Type...</option>
+					<option value="">Select a Type...</option>
 					<option value="story">User Story</option>
 					<option value="chore">Chore</option>
 				</select>
@@ -28,7 +28,7 @@
 			</div>
 			<div class="points field">
 				<select name="type" id="type">
-					<option>Points...</option>
+					<option value="">Points...</option>
 					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
