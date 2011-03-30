@@ -18,8 +18,8 @@
 			<div class="type field">
 				<select name="type" id="type">
 					<option value="">Select a Type...</option>
-					<option value="Story">Story</option>
-					<option value="Chore">Chore</option>
+					<option value="Story"<?php echo (Arr::get($values, 'type') === 'Story')?' selected="selected"':NULL; ?>>Story</option>
+					<option value="Chore"<?php echo (Arr::get($values, 'type') === 'Chore')?' selected="selected"':NULL; ?>>Chore</option>
 				</select>
 				<?php if (isset($errors['type'])): ?>
 				<div class="error"><?php echo $errors['type']; ?></div>
@@ -27,7 +27,7 @@
 			</div>
 			<div class="description field">
 				<label for="description">Description</label>
-				<textarea name="description" id="description" cols="40" rows="4"></textarea>
+				<textarea name="description" id="description" cols="40" rows="4"><?php echo Arr::get($values, 'description'); ?></textarea>
 				<?php if (isset($errors['description'])): ?>
 				<div class="error"><?php echo $errors['description']; ?></div>
 				<?php endif; ?>
@@ -35,16 +35,16 @@
 			<div class="points field">
 				<select name="points" id="type">
 					<option value="">Points...</option>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="5">5</option>
-					<option value="8">8</option>
-					<option value="13">13</option>
-					<option value="20">20</option>
-					<option value="50">50</option>
-					<option value="100">100</option>
+					<option value="0"<?php echo (Arr::get($values, 'points') === '0')?' selected="selected"':NULL; ?>>0</option>
+					<option value="1"<?php echo (Arr::get($values, 'points') === '1')?' selected="selected"':NULL; ?>>1</option>
+					<option value="2"<?php echo (Arr::get($values, 'points') === '2')?' selected="selected"':NULL; ?>>2</option>
+					<option value="3"<?php echo (Arr::get($values, 'points') === '3')?' selected="selected"':NULL; ?>>3</option>
+					<option value="5"<?php echo (Arr::get($values, 'points') === '5')?' selected="selected"':NULL; ?>>5</option>
+					<option value="8"<?php echo (Arr::get($values, 'points') === '8')?' selected="selected"':NULL; ?>>8</option>
+					<option value="13"<?php echo (Arr::get($values, 'points') === '13')?' selected="selected"':NULL; ?>>13</option>
+					<option value="20"<?php echo (Arr::get($values, 'points') === '20')?' selected="selected"':NULL; ?>>20</option>
+					<option value="50"<?php echo (Arr::get($values, 'points') === '50')?' selected="selected"':NULL; ?>>50</option>
+					<option value="100"<?php echo (Arr::get($values, 'points') === '100')?' selected="selected"':NULL; ?>>100</option>
 				</select>
 				<?php if (isset($errors['points'])): ?>
 				<div class="error"><?php echo $errors['points']; ?></div>
@@ -52,14 +52,14 @@
 			</div>
 			<div class="theme field">
 				<label for="theme">Theme</label>
-				<input type="text" name="theme" id="theme" />
+				<input type="text" name="theme" id="theme" value="<?php echo Arr::get($values, 'theme'); ?>" />
 				<?php if (isset($errors['theme'])): ?>
 				<div class="error"><?php echo $errors['theme']; ?></div>
 				<?php endif; ?>
 			</div>
 			<div class="notes field">
 				<label for="notes">Notes</label>
-				<textarea name="notes" id="notes" cols="40" rows="4"></textarea>
+				<textarea name="notes" id="notes" cols="40" rows="4"><?php echo Arr::get($values, 'notes'); ?></textarea>
 				<?php if (isset($errors['notes'])): ?>
 				<div class="error"><?php echo $errors['notes']; ?></div>
 				<?php endif; ?>
