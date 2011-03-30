@@ -4,10 +4,11 @@ class Controller_Story extends Controller {
 
 	public function action_index()
 	{
+		$stories = Model::factory('story')->find_all();
 		$view = View::factory('story/index')
-			->set('title', 'User Stories')
+			->set('title',   'User Stories')
 			->set('request', $this->request)
-			->set('stories', Model::factory('story')->find_all());
+			->set('stories', $stories);
 
 		$this->response->body($view);
 	}
@@ -22,9 +23,9 @@ class Controller_Story extends Controller {
 			throw new HTTP_Exception_404;
 
 		$view = View::factory('story/view')
-			->set('title', 'Story #'.$story->id)
+			->set('title',   'Story #'.$story->id)
 			->set('request', $this->request)
-			->set('story', $story);
+			->set('story',   $story);
 
 		$this->response->body($view);
 	}
@@ -32,9 +33,9 @@ class Controller_Story extends Controller {
 	public function action_add()
 	{
 		$view = View::factory('story/add')
-			->set('title', 'Add User Story')
+			->set('title',   'Add User Story')
 			->set('request', $this->request)
-			->set('values', $this->request->post())
+			->set('values',  $this->request->post())
 			->bind('errors', $errors);
 
 		if ($values = $this->request->post())

@@ -17,7 +17,6 @@ class Model_Story extends ORM {
 		return array(
 			'type' => array(
 				array('not_empty'),
-				// Can only be one of two at the moment
 				array('in_array', array(':value', array('Chore', 'Story'))),
 			),
 			'description' => array(
