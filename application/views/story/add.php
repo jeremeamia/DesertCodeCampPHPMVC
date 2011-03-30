@@ -16,16 +16,30 @@
 	<div class="story-form">
 		<?php echo Form::open($request); ?>
 			<div class="type field">
-				<label for="type">Type</label>
-				<input type="text" name="type" id="type" />
+				<select name="type" id="type">
+					<option>Select a Type...</option>
+					<option value="story">User Story</option>
+					<option value="chore">Chore</option>
+				</select>
 			</div>
 			<div class="description field">
 				<label for="description">Description</label>
 				<textarea name="description" id="description" cols="40" rows="4"></textarea>
 			</div>
 			<div class="points field">
-				<label for="points">Points</label>
-				<input type="number" name="points" id="points" />
+				<select name="type" id="type">
+					<option>Points...</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="5">5</option>
+					<option value="8">8</option>
+					<option value="13">13</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
 			</div>
 			<div class="theme field">
 				<label for="theme">Theme</label>
