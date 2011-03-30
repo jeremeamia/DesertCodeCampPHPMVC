@@ -17,7 +17,6 @@
 			<a href="<?php echo URL::site('story/index'); ?>" class="button small">&lt;&ensp;Back to Story Index</a>
 		</div>
 		<p>Sorry, we did not take the time to implement this page for the presentation.</p>
-		<p><a href="/story/index" title="Back to stories">&laquo; Return back to the Stories index</a></p>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 	<script>window.jQuery || document.write("<script src='/assets/js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
