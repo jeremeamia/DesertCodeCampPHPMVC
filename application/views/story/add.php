@@ -20,10 +20,14 @@
 		<div id="form_story_add" class="card">
 			<?php echo Form::open($request); ?>
 				<div id="type_field" class="field">
+					<label for="points">Story Type</label>
+					<?php $type_options = array('Story', 'Chore'); ?>
 					<select name="type" id="type">
-						<option value="">Select a Story Type...</option>
-						<option value="Story"<?php echo (Arr::get($values, 'type') === 'Story')?' selected="selected"':NULL; ?>>Story</option>
-						<option value="Chore"<?php echo (Arr::get($values, 'type') === 'Chore')?' selected="selected"':NULL; ?>>Chore</option>
+						<option value="">Story Types&hellip;</option>
+						<?php foreach ($type_options as $type_value): ?>
+							<?php $selected = (Arr::get($type_options, 'type') === $type_value) ? ' selected="selected"' : ''; ?>
+							<option value="<?php echo $type_value; ?>"<?php echo $selected; ?>><?php echo $type_value; ?></option>
+						<?php endforeach; ?>
 					</select>
 					<?php if (isset($errors['type'])): ?>
 					<div class="error"><?php echo $errors['type']; ?></div>
@@ -37,8 +41,9 @@
 					<?php endif; ?>
 				</div>
 				<div id="points_field" class="field">
+					<label for="points">Story Points</label>
 					<?php $point_options = array('0', '1', '2', '3', '5', '8', '13', '20', '40', '100'); ?>
-					<select name="points" id="type">
+					<select name="points" id="points">
 						<option value="">Points&hellip;</option>
 						<?php foreach ($point_options as $point_value): ?>
 							<?php $selected = (Arr::get($values, 'points') === $point_value) ? ' selected="selected"' : ''; ?>
