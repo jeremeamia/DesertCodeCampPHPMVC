@@ -35,17 +35,17 @@ class Controller_Story extends Controller {
 		$view = View::factory('story/add')
 			->set('title',   'Add User Story')
 			->set('request', $this->request)
-			->set('values',  $this->request->post())
+			->bind('values', $values)
 			->bind('errors', $errors);
 
 		if ($values = $this->request->post())
 		{
-			$story = ORM::factory('story');
-			$story->values($values, array('type', 'description', 'points', 'theme', 'notes'));
-
 			try
 			{
-				$story->save();
+				$story = Model::factory('story')
+					->values($values, array('type', 'description', 'points', 'theme', 'notes'))
+					->save();
+				
 				$this->request->redirect(Route::url('story'));
 			}
 			catch (ORM_Validation_Exception $e)
