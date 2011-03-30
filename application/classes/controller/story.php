@@ -50,7 +50,6 @@ class Controller_Story extends Controller {
 			catch (ORM_Validation_Exception $e)
 			{
 				$errors = $e->errors('validation');
-				echo Debug::vars($errors);
 			}
 		}
 

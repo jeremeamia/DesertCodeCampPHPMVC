@@ -21,10 +21,16 @@
 					<option value="Story">Story</option>
 					<option value="Chore">Chore</option>
 				</select>
+				<?php if (isset($errors['type'])): ?>
+				<div class="error"><?php echo $errors['type']; ?></div>
+				<?php endif; ?>
 			</div>
 			<div class="description field">
 				<label for="description">Description</label>
 				<textarea name="description" id="description" cols="40" rows="4"></textarea>
+				<?php if (isset($errors['description'])): ?>
+				<div class="error"><?php echo $errors['description']; ?></div>
+				<?php endif; ?>
 			</div>
 			<div class="points field">
 				<select name="points" id="type">
@@ -40,14 +46,23 @@
 					<option value="50">50</option>
 					<option value="100">100</option>
 				</select>
+				<?php if (isset($errors['points'])): ?>
+				<div class="error"><?php echo $errors['points']; ?></div>
+				<?php endif; ?>
 			</div>
 			<div class="theme field">
 				<label for="theme">Theme</label>
 				<input type="text" name="theme" id="theme" />
+				<?php if (isset($errors['theme'])): ?>
+				<div class="error"><?php echo $errors['theme']; ?></div>
+				<?php endif; ?>
 			</div>
 			<div class="notes field">
 				<label for="notes">Notes</label>
 				<textarea name="notes" id="notes" cols="40" rows="4"></textarea>
+				<?php if (isset($errors['notes'])): ?>
+				<div class="error"><?php echo $errors['notes']; ?></div>
+				<?php endif; ?>
 			</div>
 			<div class="add field">
 				<button type="submit">Add</button>

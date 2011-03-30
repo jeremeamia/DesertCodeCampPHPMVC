@@ -7,6 +7,7 @@ class Model_Story extends ORM {
 		return array(
 			TRUE => array(
 				array('trim'),
+				array('strip_tags'),
 			),
 		);
 	}
