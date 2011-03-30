@@ -14,7 +14,7 @@
 	<div id="main" role="main">
 		<h1>This Page is Incomplete</h1>
 		<div class="breadcrumbs">
-			<a href="<?php echo URL::site('story/index'); ?>">&laquo; Back to Story Index</a>
+			<a href="<?php echo URL::site('story/index'); ?>" class="button small">&lt;&ensp;Back to Story Index</a>
 		</div>
 		<p>Sorry, we did not take the time to implement this page for the presentation.</p>
 		<p><a href="/story/index" title="Back to stories">&laquo; Return back to the Stories index</a></p>

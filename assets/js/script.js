@@ -14,6 +14,21 @@ $(function(){
 		});
 	}
 
+	$('button').each(function(){
+		var button = $(this);
+		var link = $(document.createElement('a'))
+			.attr('href', '#')
+			.attr('id', button.attr('id')+'_link')
+			.addClass('button')
+			.html(button.html())
+			.click(function(){
+				button.click();
+				return false;
+			});
+		button.after(link);
+		button.hide();
+	});
+
 });
 
 

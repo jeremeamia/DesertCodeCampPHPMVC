@@ -16,7 +16,7 @@
 
 		<h1><?php echo $title; ?></h1>
 		<div class="breadcrumbs">
-			<a href="<?php echo URL::site('story/index'); ?>">&laquo; Back to Story Index</a>
+			<a href="<?php echo URL::site('story/index'); ?>" class="button small">&lt;&ensp;Back to Story Index</a>
 		</div>
 		<div class="story card" id="story_#<?php echo $story->id; ?>">
 			<span class="story-number"><?php echo $story->type; ?> #<?php echo $story->id; ?></span>
