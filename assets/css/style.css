@@ -376,6 +376,7 @@ form .field #points {width: 100px;}
 	padding: 30px 30px 60px;
 	font-size: 1.25em;
 	line-height: 1.5em;
+	min-height: 300px;
 }
 #story_view h2 {padding: 15px 0; font-size: 1.75em;}
 #story_view .story .story-number {
