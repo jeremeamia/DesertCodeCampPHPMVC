@@ -23,7 +23,7 @@
 					<label for="points" class="required">Story Type</label>
 					<div class="input">
 						<?php $type_options = array('Story', 'Chore'); ?>
-						<select name="type" id="type" autofocus="true">
+						<select name="type" id="type">
 							<option value="">Story Types&hellip;</option>
 							<?php foreach ($type_options as $type_value): ?>
 								<?php $selected = (Arr::get($type_options, 'type') === $type_value) ? ' selected="selected"' : ''; ?>
@@ -63,7 +63,7 @@
 				<div id="theme_field" class="field clearfix">
 					<label for="theme" class="required">Theme</label>
 					<div class="input">
-						<input type="text" name="theme" id="theme" value="<?php echo Arr::get($values, 'theme'); ?>" maxlength="15" />
+						<input type="text" name="theme" id="theme" value="<?php echo Arr::get($values, 'theme'); ?>" maxlength="15">
 						<?php if (isset($errors['theme'])): ?>
 							<div class="error"><?php echo $errors['theme']; ?></div>
 						<?php endif; ?>
