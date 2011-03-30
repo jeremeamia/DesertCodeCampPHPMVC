@@ -37,6 +37,23 @@ class Controller_Story extends Controller {
 			->set('values', $this->request->post())
 			->bind('errors', $errors);
 
+		if ($values = $this->request->post())
+		{
+			$story = ORM::factory('story');
+			$story->values($values, array('type', 'description', 'points', 'theme', 'notes'));
+
+			try
+			{
+				$story->save();
+				$this->request->redirect(Route::url('story'));
+			}
+			catch (ORM_Validation_Exception $e)
+			{
+				$errors = $e->errors('validation');
+				echo Debug::vars($errors);
+			}
+		}
+
 		$this->response->body($view);
 	}
 

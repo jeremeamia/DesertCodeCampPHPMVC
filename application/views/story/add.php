@@ -18,8 +18,8 @@
 			<div class="type field">
 				<select name="type" id="type">
 					<option value="">Select a Type...</option>
-					<option value="story">User Story</option>
-					<option value="chore">Chore</option>
+					<option value="Story">Story</option>
+					<option value="Chore">Chore</option>
 				</select>
 			</div>
 			<div class="description field">
@@ -27,7 +27,7 @@
 				<textarea name="description" id="description" cols="40" rows="4"></textarea>
 			</div>
 			<div class="points field">
-				<select name="type" id="type">
+				<select name="points" id="type">
 					<option value="">Points...</option>
 					<option value="0">0</option>
 					<option value="1">1</option>
