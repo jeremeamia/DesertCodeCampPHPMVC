@@ -33,9 +33,6 @@ class Controller_Story extends Controller_Website {
 	public function action_add()
 	{
 		$this->view
-			->set('title',   'Add User Story')
-			->set('request', $this->request)
-			->bind('values', $values)
 			->bind('errors', $errors);
 
 		if ($values = $this->request->post())

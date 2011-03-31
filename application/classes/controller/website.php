@@ -30,8 +30,8 @@ abstract class Controller_Website extends Controller {
 		$path = trim(implode('/', $path), '/');
 
 		// Send $_POST and $_GET to the view by default
-		$this->values = $_POST;
-		$this->filters = $_GET;
+		$this->values = $this->request->post();
+		$this->filters = $this->request->query();
 
 		try
 		{
