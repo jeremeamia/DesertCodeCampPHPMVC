@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Story extends Controller {
+class Controller_Story extends Controller_Website {
 
 	public function action_index()
 	{
@@ -32,7 +32,7 @@ class Controller_Story extends Controller {
 
 	public function action_add()
 	{
-		$view = View::factory('story/add')
+		$this->view
 			->set('title',   'Add User Story')
 			->set('request', $this->request)
 			->bind('values', $values)
@@ -53,8 +53,6 @@ class Controller_Story extends Controller {
 				$errors = $e->errors('validation');
 			}
 		}
-
-		$this->response->body($view);
 	}
 
 	public function action_edit()

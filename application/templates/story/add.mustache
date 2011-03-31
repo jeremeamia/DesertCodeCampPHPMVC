@@ -1,0 +1,73 @@
+<div id="form_story_add" class="card">
+	<form action="{{action}}" method="post">
+		<div id="type_field" class="field clearfix">
+			<label for="points" class="required">Story Type</label>
+			<div class="input">
+				<select name="type" id="type">
+					<option value="">Story Types&hellip;</option>
+					{{#types_options}}
+					<option value="{{value}}"{{#selected}} selected="selected"{{/selected}}>{{text}}</option>
+					{{/types_options}}
+				</select>
+				{{#errors}}
+					{{#type}}
+					<div class="error">{{type}}</div>
+					{{/type}}
+				{{/errors}}
+			</div>
+		</div>
+		<div id="description_field" class="field clearfix">
+			<label for="description" class="required">Description</label>
+			<div class="input">
+				<textarea name="description" id="description" cols="60" rows="3" placeholder="As a User, I can&hellip;">{{#values}}{{description}}{{/values}}</textarea>
+				{{#errors}}
+					{{#description}}
+					<div class="error">{{description}}</div>
+					{{/description}}
+				{{/errors}}
+			</div>
+		</div>
+		<div id="points_field" class="field clearfix">
+			<label for="points" class="required">Story Points</label>
+			<div class="input">
+				
+				<select name="points" id="points">
+					<option value="">Points&hellip;</option>
+					{{#points_options}}
+					<option value="{{value}}"{{#selected}} selected="selected"{{/selected}}>{{text}}</option>
+					{{/points_options}}
+				</select>
+				{{#errors}}
+					{{#points}}
+					<div class="error">{{points}}</div>
+					{{/points}}
+				{{/errors}}
+			</div>
+		</div>
+		<div id="theme_field" class="field clearfix">
+			<label for="theme" class="required">Theme</label>
+			<div class="input">
+				<input type="text" name="theme" id="theme" value="{{#values}}{{theme}}{{/values}}" maxlength="15">
+				{{#errors}}
+					{{#theme}}
+					<div class="error">{{theme}}</div>
+					{{/theme}}
+				{{/errors}}
+			</div>
+		</div>
+		<div id="notes_field" class="field clearfix">
+			<label for="notes">Notes</label>
+			<div class="input">
+				<textarea name="notes" id="notes" cols="60" rows="6">{{#values}}{{notes}}{{/values}}</textarea>
+				{{#errors}}
+					{{#notes}}
+					<div class="error">{{notes}}</div>
+					{{/notes}}
+				{{/errors}}
+			</div>
+		</div>
+		<div class="button-group clearfix">
+			<button id="submit" type="submit">Add Story</button>
+		</div>
+	</form>
+</div>
