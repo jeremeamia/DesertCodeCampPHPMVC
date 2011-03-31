@@ -26,15 +26,8 @@ abstract class View_Page extends Kostache_Layout {
 		return $path;
 	}
 
-	public function urls()
+	public function story_index_url()
 	{
-		return array(
-			'story_index' => Route::url('story'),
-		);
-	}
-
-	public function content()
-	{
-		// @TODO
+		return Route::url('story');
 	}
 }
