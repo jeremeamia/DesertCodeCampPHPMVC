@@ -2,5 +2,5 @@
 
 class View_Story_Index extends View_Page
 {
-
+	public $show_breadcrumbs = FALSE;
 }
