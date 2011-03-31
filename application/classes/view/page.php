@@ -2,30 +2,34 @@
 /**
  * A base view for pages in the application to extend
  */
-abstract class View_Page
-{
+abstract class View_Page extends Kostache_Layout {
+
+	protected $_layout = 'page';
+
 	public $show_breadcrumbs = TRUE;
 
 	public function title()
 	{
-		$request = Request::current();
+		$request = $this->request;
 		$path = array($request->directory(), $request->controller(), $request->action());
 		$path = trim(implode('.', $path), '.');
+
 		return __(Kohana::message('titles', $path));
 	}
 
 	public function body_id()
 	{
-		$request = Request::current();
-		$id = array($request->directory(), $request->controller(), $request->action());
-		$id = trim(implode('_', $path), '_');
-		return $id;
+		$request = $this->request;
+		$path = array($request->directory(), $request->controller(), $request->action());
+		$path = trim(implode('_', $path), '_');
+
+		return $path;
 	}
 
 	public function urls()
 	{
 		return array(
-			'story_index' => Route::get('story')->uri(array('action' => 'index')),
+			'story_index' => Route::url('story'),
 		);
 	}
 
