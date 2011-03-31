@@ -1,0 +1,16 @@
+<div class="stories clearfix">
+	<div class="story card" id="story_add_card">
+		<p class="story-description">{{#new_story}}<a href="{{url}}">{{text}}</a>{{/new_story}}</p>
+	</div>
+	{{#stories}}
+		<div class="story card" id="story_#{{id}}">
+			<span class="story-number">{{type}} #{{id}}</span>
+			<span class="story-theme">Theme: {{theme}}</span>
+			<span class="story-points">{{points}} pts</span>
+			<p class="story-description">{{description}}</p>
+			<a class="ir story-action view" href="{{view_url}}">View Story #{{id}}</a>
+			<a class="ir story-action edit" href="{{edit_url}}">Edit Story #{{id}}</a>
+			<a class="ir story-action delete" href="{{delete_url}}">Delete Story #{{id}}</a>
+		</div>
+	{{/stories}}
+</div>
