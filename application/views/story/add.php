@@ -38,7 +38,7 @@
 				<div id="description_field" class="field clearfix">
 					<label for="description" class="required">Description</label>
 					<div class="input">
-						<textarea name="description" id="description" cols="60" rows="3" placeholder="As a User, I can&hellip;"><?php echo Arr::get($values, 'description'); ?></textarea>
+						<textarea name="description" id="description" cols="60" rows="3" placeholder="As a User, I can&hellip;"><?php echo HTML::chars(Arr::get($values, 'description')); ?></textarea>
 						<?php if (isset($errors['description'])): ?>
 							<div class="error"><?php echo $errors['description']; ?></div>
 						<?php endif; ?>
@@ -63,7 +63,7 @@
 				<div id="theme_field" class="field clearfix">
 					<label for="theme" class="required">Theme</label>
 					<div class="input">
-						<input type="text" name="theme" id="theme" value="<?php echo Arr::get($values, 'theme'); ?>" maxlength="15">
+						<input type="text" name="theme" id="theme" value="<?php echo HTML::chars(Arr::get($values, 'theme')); ?>" maxlength="15">
 						<?php if (isset($errors['theme'])): ?>
 							<div class="error"><?php echo $errors['theme']; ?></div>
 						<?php endif; ?>
@@ -72,7 +72,7 @@
 				<div id="notes_field" class="field clearfix">
 					<label for="notes">Notes</label>
 					<div class="input">
-						<textarea name="notes" id="notes" cols="60" rows="6"><?php echo Arr::get($values, 'notes'); ?></textarea>
+						<textarea name="notes" id="notes" cols="60" rows="6"><?php echo HTML::chars(Arr::get($values, 'notes')); ?></textarea>
 						<?php if (isset($errors['notes'])): ?>
 							<div class="error"><?php echo $errors['notes']; ?></div>
 						<?php endif; ?>
