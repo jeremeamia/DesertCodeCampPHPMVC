@@ -443,7 +443,7 @@ form .field #points {width: 100px;}
 }
 
 /* STORY/INCOMPLETE PAGE */
-#story_incomplete p {
+#story_edit p, #story_delete p {
 	font-size: 1.25em;
 	font-style: italic;
 }
