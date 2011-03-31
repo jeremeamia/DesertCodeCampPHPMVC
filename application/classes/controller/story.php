@@ -8,7 +8,7 @@ class Controller_Story extends Controller_Website {
 
 	public function action_view()
 	{
-		$view = View::factory('story/view')
+		$this->view
 			->bind('story', $story);
 
 		$story = Model::factory('story')
