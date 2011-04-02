@@ -9,10 +9,8 @@ on the website as well.
 
 The project is a simple agile programming tool for creating user story cards. To keep this project very small and simple, it will consist of only 1 controller and 1 model for representing the user stories. In order to demonstrate the different parts of our presentation we will have a few separate branches for showing specific features/ideas:
 
-- master - original code based on a typical [Kohana 3.1.2](http://kohanaframework.org) installation
-- hmvc - modified code to support an HMVC example
-- view_classes - modified code where actions and view are rewritten using the Kostache/Mustache module
-- layout - modified showing how to construct a layout system using the view classes and the before and after methods
+- original - original code based on a typical [Kohana 3.1.2](http://kohanaframework.org) installation
+- view-classes - modified code where actions and view are rewritten using the Kostache/Mustache module
 
 ## Presentation
 
@@ -35,4 +33,4 @@ a solid and extendible infrastructure.
   - Models
   - HMVC
   - View Classes
-  - Layouts, `before()`, and `after()`
+  - Layouts
